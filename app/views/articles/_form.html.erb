@@ -1,8 +1,8 @@
-<% = form_with model: articale do |form| %>
+<%= form_with model: article do |form| %>
     <div>
       <%= form.label :title %><br>
       <%= form.text_field :title %>
-      <% articel.errors.full_message_for(:title).each do 
+      <% article.errors.full_messages_for(:title).each do 
         |messge| %>
         <div><%= message %></div>
         <% end %>
@@ -10,7 +10,7 @@
 
     <%= form.label :body %><br>
       <%= form.text_area :body %>
-      <% articel.errors.full_message_for(:body).each do 
+      <% article.errors.full_messages_for(:body).each do 
         |messge| %>
         <div><%= message %></div>
         <% end %>
