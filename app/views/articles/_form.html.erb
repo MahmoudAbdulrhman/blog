@@ -1,0 +1,23 @@
+<% = form_with model: articale do |form| %>
+    <div>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+      <% articel.errors.full_message_for(:title).each do 
+        |messge| %>
+        <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <%= form.label :body %><br>
+      <%= form.text_area :body %>
+      <% articel.errors.full_message_for(:body).each do 
+        |messge| %>
+        <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+      <%= form.submit %>
+    </div>
+<% end %>    
+    
